@@ -10,7 +10,7 @@
  Use in your templates as:
 
  <link
-      href="/static/css/site.css?cacheId=${build_cache_id('/static/css/site.css')}"
+      href="/static/css/site.css?cacheId=${view.build_cache_id('/static/css/site.css')}"
       rel="stylesheet">
 """
 
@@ -26,7 +26,7 @@ recompute_caches_every_request = True
 enable_tracing = False
 
 
-def build_cache_id(relative_file_url: str):
+def view.build_cache_id(relative_file_url: str):
     if not relative_file_url:
         return "ERROR_NO_FILE_SPECIFIED"
 
