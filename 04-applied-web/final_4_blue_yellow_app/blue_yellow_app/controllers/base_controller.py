@@ -6,9 +6,9 @@ import pyramid.httpexceptions as exc
 class BaseController:
     def __init__(self, request):
         self.request = request
-        self.view.build_cache_id = static_cache.view.build_cache_id
+        self.build_cache_id = static_cache.build_cache_id
 
-        layout_render = pyramid.renderers.get_renderer('blue_yellow_app:templates/shared/_layout.pt')
+        layout_render = pyramid.renderers.get_renderer('waterknot_music:templates/shared/layout.pt')
         impl = layout_render.implementation()
         self.layout = impl.macros['layout']
 

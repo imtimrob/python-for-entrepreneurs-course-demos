@@ -26,7 +26,7 @@ recompute_caches_every_request = True
 enable_tracing = False
 
 
-def view.build_cache_id(relative_file_url: str):
+def build_cache_id(relative_file_url: str):
     if not relative_file_url:
         return "ERROR_NO_FILE_SPECIFIED"
 
